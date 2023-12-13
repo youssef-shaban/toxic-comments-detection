@@ -1,0 +1,12 @@
+{
+	"recommendations": [
+		"ms-python.black-formatter",
+		"njpwerner.autodocstring",
+		"ms-python.flake8",
+		"ms-python.isort",
+		"ms-python.python",
+		"wayou.vscode-todo-highlight",
+		"ms-vscode-remote.remote-wsl",
+		"streetsidesoftware.code-spell-checker"
+	],
+}

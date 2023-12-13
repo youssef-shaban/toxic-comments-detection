@@ -1,0 +1,25 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+    -   id: check-yaml
+-   repo: local
+    hooks:
+    -   id: commit-msg-convention
+        name: Check Commit Message Convention
+        entry: python3
+        language: system
+        files: ^(.git/COMMIT_EDITMSG)
+        types: [text]
+        args: ["-c", "import re, sys; pattern = re.compile(r'^(init|feat|fix|chore|docs|style|refactor|perf|test)(\\([^)]+\\))?: .+$', re.MULTILINE); match = pattern.match(open(sys.argv[1]).read().strip()); sys.exit(0 if match else 1)"]
+-   repo: https://github.com/ambv/black
+    rev: 22.3.0
+    hooks:
+    - id: black
+-   repo: https://github.com/pycqa/flake8
+    rev: 3.9.2
+    hooks:
+    -   id: flake8
+        additional_dependencies: [flake8-typing-imports==1.10.0]
+        exclude: ^tests/|/__init__.py$
+

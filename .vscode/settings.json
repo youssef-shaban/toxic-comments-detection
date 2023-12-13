@@ -1,0 +1,28 @@
+{
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "cSpell.words": [
+    "downsample",
+    "downsampling",
+    "intermed",
+    "kaiming",
+    "LSGAN",
+    "NSGAN",
+    "optim",
+    "relu",
+    "smpl",
+    "Sobel",
+    "torchvision",
+    "trianglemeshes",
+    "unsqueeze",
+    "upsampled",
+    "upsampling",
+    "voxelgrid",
+    "voxelgrids",
+    "voxelizations",
+    "Voxelize",
+    "voxels"
+  ]
+}
