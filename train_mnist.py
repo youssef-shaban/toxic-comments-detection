@@ -5,7 +5,7 @@ import os
 
 import torchvision
 import torchvision.transforms as transforms
-from src.layers.s4 import S4Block as S4
+from src.layers.s4d import S4D
 from tqdm.auto import tqdm
 
 dropout_fn = nn.Dropout2d
@@ -65,7 +65,7 @@ class S4Model(nn.Module):
         self.dropouts = nn.ModuleList()
         for _ in range(n_layers):
             self.s4_layers.append(
-                S4(d_model, dropout=dropout, transposed=True, lr=min(0.001, 0.01))
+                S4D(d_model, dropout=dropout, transposed=True, lr=min(0.001, 0.01))
             )
             self.norms.append(nn.LayerNorm(d_model))
             self.dropouts.append(dropout_fn(dropout))
